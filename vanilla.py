@@ -1,5 +1,7 @@
 import time, sys
 
+#the test function
+#you can copy this file and implement another way to get the same result
 def run(x):
     if (x < 1): x =1
     groupA = []
@@ -14,12 +16,18 @@ def run(x):
         
     for a in groupA:
         for b in groupB:
-            groupC.append(a/b)
+            groupC.append(b/a)
+    return groupC[-1]
 
-x = int(sys.argv[1])
+
+#dont touch this
+#measure code and output that we need to compare implementations
+x = 3000 #int(sys.argv[1])
 step = 100
 for xx in range(0 , x+step, step):
     now = time.process_time()
-    run(xx)
+    result = run(xx)
     print (xx , ",", time.process_time() - now)
-print (x , ",", time.process_time(), ", total")
+    
+#compare the result to other implementations to knwo your code runs correct
+print (x , ",", time.process_time(), ", total", result)
