@@ -17,7 +17,7 @@ def runGenerator(x):
     if (x < 1): x = 1
     A = createRange(0, x, lambda a: a + 1)
     B = transformList(A, lambda a: a**2)
-    C = list(joinLists(A, B, lambda a, b: a // b))
+    C = list(joinLists(A, B, lambda a, b: b // a))
 
 x = int(sys.argv[1])
 step = 100

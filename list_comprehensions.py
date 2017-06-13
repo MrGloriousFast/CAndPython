@@ -1,6 +1,6 @@
 import time, sys
 
-run_comprehension = lambda x: (a//b for a, b in ((d,d**2) for d in (c + 1 for c in range(0, x))))
+run_comprehension = lambda x: (b//a for a, b in ((d,d**2) for d in (c + 1 for c in range(0, x))))
 
 x = int(sys.argv[1])
 step = 100
